@@ -394,7 +394,7 @@ export function PortfolioSection() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative bg-card rounded-xl overflow-hidden max-w-4xl max-h-[90vh] w-full shadow-2xl"
+              className="relative bg-card rounded-xl overflow-hidden max-w-6xl max-h-[95vh] w-full shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -409,14 +409,16 @@ export function PortfolioSection() {
               <div className="relative">
                 {selectedWork.mediaType === 'video' && selectedWork.videoUrl ? (
                   selectedWork.videoUrl.includes('youtube.com/embed') ? (
-                    <iframe
-                      src={selectedWork.videoUrl}
-                      title={selectedWork.title}
-                      className="w-full h-[70vh]"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <iframe
+                        src={selectedWork.videoUrl}
+                        title={selectedWork.title}
+                        className="absolute top-0 left-0 w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
                   ) : (
                     <video
                       controls
@@ -438,7 +440,7 @@ export function PortfolioSection() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-2xl font-bold text-foreground">{selectedWork.title}</h3>
                   <span className={`px-3 py-1 rounded-full text-sm ${
