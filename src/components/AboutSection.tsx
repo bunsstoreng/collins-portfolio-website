@@ -50,7 +50,7 @@ export function AboutSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <ImageWithFallback
-                src="/src/assets/IMG_0355.jpg"
+                src="/assets/IMG_0355.jpg"
                 alt="Collins Kelvin"
                 className="w-full h-96 lg:h-[500px] object-cover"
               />
