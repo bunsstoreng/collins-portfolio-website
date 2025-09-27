@@ -50,7 +50,7 @@ export function AboutSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1703420371268-85d78cfdc5cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhcnRpc3QlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NTg3MTA5ODB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/src/assets/IMG_0355.jpg"
                 alt="Collins Kelvin"
                 className="w-full h-96 lg:h-[500px] object-cover"
               />

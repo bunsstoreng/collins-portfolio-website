@@ -4,18 +4,18 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
-import { Instagram, Linkedin, Globe, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Globe, Mail, Phone, MapPin, Twitter } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Instagram, label: 'Instagram', href: '#', color: 'hover:text-pink-600' },
-  { icon: Globe, label: 'ArtStation', href: '#', color: 'hover:text-blue-600' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#', color: 'hover:text-blue-700' },
+  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/collins60.kelvin', color: 'hover:text-pink-600' },
+  { icon: Globe, label: 'ArtStation', href: 'https://www.artstation.com/collins60kelvin', color: 'hover:text-blue-600' },
+  { icon: Twitter, label: 'X', href: 'https://x.com/CollinsKelvin60', color: 'hover:text-blue-600' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/collins-momodu-935258199/', color: 'hover:text-blue-700' },
 ];
 
 const contactInfo = [
-  { icon: Mail, label: 'collins.kelvin@email.com', href: 'mailto:collins.kelvin@email.com' },
-  { icon: Phone, label: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-  { icon: MapPin, label: 'Los Angeles, CA', href: '#' },
+  { icon: Mail, label: 'collins60.kelvin@gmail.com', href: 'mailto:collins60.kelvin@gmail.com' },
+  { icon: MapPin, label: 'Lagos, Nigeria', href: '#' },
 ];
 
 export function ContactSection() {
