@@ -7,6 +7,7 @@ interface PortfolioWork {
   id: number;
   title: string;
   category: 'storyboard' | 'animation' | 'character';
+  subcategory?: 'action' | 'drama';
   mediaType: 'image' | 'video';
   image: string;
   videoUrl?: string;
@@ -14,6 +15,7 @@ interface PortfolioWork {
 }
 
 const portfolioWorks: PortfolioWork[] = [
+  // Animation Works
   {
     id: 1,
     title: "Animated Short Film",
@@ -22,14 +24,6 @@ const portfolioWorks: PortfolioWork[] = [
     image: "https://images.unsplash.com/photo-1714251638558-349c2f49ea33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdG9yeWJvYXJkJTIwc2tldGNoJTIwYW5pbWF0aW9ufGVufDF8fHx8MTc1ODcxMDk3OHww&ixlib=rb-4.1.0&q=80&w=1080",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     description: "2D animated short film with custom character design"
-  },
-  {
-    id: 2,
-    title: "Fantasy Character Series",
-    category: "character",
-    mediaType: "image",
-    image: "https://images.unsplash.com/photo-1741894785509-d87c84bdc275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwyZCUyMGNoYXJhY3RlciUyMGRlc2lnbiUyMGNvbmNlcHQlMjBhcnR8ZW58MXx8fHwxNzU4NzEwOTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Character design concepts for fantasy adventure"
   },
   {
     id: 3,
@@ -41,12 +35,23 @@ const portfolioWorks: PortfolioWork[] = [
     description: "2D animation sequences for commercial project"
   },
   {
-    id: 4,
-    title: "Commercial Storyboard",
-    category: "storyboard",
+    id: 6,
+    title: "Animated Series Pilot",
+    category: "animation",
+    mediaType: "video",
+    image: "https://images.unsplash.com/photo-1730641884360-0f6bb86e70e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmltYXRpb24lMjBhcnR3b3JrJTIwZHJhd2luZ3xlbnwxfHx8fDE3NTg3MTA5Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    description: "2D animation work for series pilot episode"
+  },
+  
+  // Character Design Works
+  {
+    id: 2,
+    title: "Fantasy Character Series",
+    category: "character",
     mediaType: "image",
-    image: "https://images.unsplash.com/photo-1519217651866-847339e674d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHdvcmtzcGFjZSUyMGRlc2t8ZW58MXx8fHwxNzU4Njk4OTE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Storyboard for television commercial campaign"
+    image: "https://images.unsplash.com/photo-1741894785509-d87c84bdc275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwyZCUyMGNoYXJhY3RlciUyMGRlc2lnbiUyMGNvbmNlcHQlMjBhcnR8ZW58MXx8fHwxNzU4NzEwOTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "Character design concepts for fantasy adventure"
   },
   {
     id: 5,
@@ -57,14 +62,85 @@ const portfolioWorks: PortfolioWork[] = [
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     description: "Character design and animation showcase reel"
   },
+
+  // Storyboard - Action Subcategory
   {
-    id: 6,
-    title: "Animated Series Pilot",
-    category: "animation",
+    id: 7,
+    title: "Action Sequence Storyboard",
+    category: "storyboard",
+    subcategory: "action",
+    mediaType: "image",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY3Rpb24lMjBzZXF1ZW5jZSUyMHN0b3J5Ym9hcmR8ZW58MXx8fHwxNzU4NzEwOTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "High-energy action sequence storyboard for thriller film"
+  },
+  {
+    id: 8,
+    title: "Car Chase Storyboard",
+    category: "storyboard",
+    subcategory: "action",
     mediaType: "video",
-    image: "https://images.unsplash.com/photo-1730641884360-0f6bb86e70e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmltYXRpb24lMjBhcnR3b3JrJTIwZHJhd2luZ3xlbnwxfHx8fDE3NTg3MTA5Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBjaGFzZSUyMHN0b3J5Ym9hcmR8ZW58MXx8fHwxNzU4NzEwOTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    description: "Dynamic car chase sequence storyboard with multiple camera angles"
+  },
+  {
+    id: 9,
+    title: "Fight Scene Storyboard",
+    category: "storyboard",
+    subcategory: "action",
+    mediaType: "image",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWdodCUyMHNjZW5lJTIwc3Rvcnlib2FyZHxlbnwxfHx8fDE3NTg3MTA5ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "Intense hand-to-hand combat storyboard with choreography notes"
+  },
+  {
+    id: 10,
+    title: "Explosion Sequence",
+    category: "storyboard",
+    subcategory: "action",
+    mediaType: "video",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleHBsb3Npb24lMjBzZXF1ZW5jZXxlbnwxfHx8fDE3NTg3MTA5ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    description: "Explosive action sequence storyboard with timing and effects notes"
+  },
+
+  // Storyboard - Drama Subcategory
+  {
+    id: 11,
+    title: "Emotional Dialogue Scene",
+    category: "storyboard",
+    subcategory: "drama",
+    mediaType: "image",
+    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbW90aW9uYWwlMjBkaWFsb2d1ZSUyMHNjZW5lfGVufDF8fHx8MTc1ODcxMDk4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "Intimate dialogue scene storyboard focusing on character emotions"
+  },
+  {
+    id: 12,
+    title: "Family Reunion Storyboard",
+    category: "storyboard",
+    subcategory: "drama",
+    mediaType: "video",
+    image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjByZXVuaW9uJTIwc3Rvcnlib2FyZHxlbnwxfHx8fDE3NTg3MTA5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-    description: "2D animation work for series pilot episode"
+    description: "Heartwarming family reunion storyboard with emotional beats"
+  },
+  {
+    id: 13,
+    title: "Romantic Moment Storyboard",
+    category: "storyboard",
+    subcategory: "drama",
+    mediaType: "image",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMG1vbWVudCUyMHN0b3J5Ym9hcmR8ZW58MXx8fHwxNzU4NzEwOTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "Tender romantic scene storyboard with subtle character interactions"
+  },
+  {
+    id: 14,
+    title: "Loss and Grief Sequence",
+    category: "storyboard",
+    subcategory: "drama",
+    mediaType: "video",
+    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb3NzJTIwYW5kJTIwZ3JpZWYlMjBzZXF1ZW5jZXxlbnwxfHx8fDE3NTg3MTA5ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    description: "Powerful dramatic sequence storyboard exploring themes of loss and grief"
   }
 ];
 
@@ -75,13 +151,42 @@ const categories = [
   { id: 'character', label: 'Character Design' },
 ];
 
+const storyboardSubcategories = [
+  { id: 'action', label: 'Action' },
+  { id: 'drama', label: 'Drama' },
+];
+
 export function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
   const [selectedWork, setSelectedWork] = useState<PortfolioWork | null>(null);
 
-  const filteredWorks = activeCategory === 'all' 
-    ? portfolioWorks 
-    : portfolioWorks.filter(work => work.category === activeCategory);
+  const filteredWorks = (() => {
+    if (activeCategory === 'all') {
+      return portfolioWorks;
+    }
+    
+    if (activeCategory === 'storyboard' && activeSubcategory) {
+      return portfolioWorks.filter(work => 
+        work.category === 'storyboard' && work.subcategory === activeSubcategory
+      );
+    }
+    
+    if (activeCategory === 'storyboard' && !activeSubcategory) {
+      return portfolioWorks.filter(work => work.category === 'storyboard');
+    }
+    
+    return portfolioWorks.filter(work => work.category === activeCategory);
+  })();
+
+  const handleCategoryChange = (categoryId: string) => {
+    setActiveCategory(categoryId);
+    setActiveSubcategory(null); // Reset subcategory when changing main category
+  };
+
+  const handleSubcategoryChange = (subcategoryId: string) => {
+    setActiveSubcategory(subcategoryId);
+  };
 
   const openModal = (work: PortfolioWork) => {
     setSelectedWork(work);
@@ -118,13 +223,14 @@ export function PortfolioSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex justify-center mb-12"
+            className="flex flex-col items-center mb-12"
           >
-            <div className="flex md:flex-wrap gap-4 bg-card rounded-full p-2 shadow-lg overflow-x-auto md:overflow-x-visible scrollbar-hide snap-x snap-mandatory">
+            {/* Main Categories */}
+            <div className="flex md:flex-wrap gap-4 bg-card rounded-full p-2 shadow-lg overflow-x-auto md:overflow-x-visible scrollbar-hide snap-x snap-mandatory mb-4">
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  onClick={() => handleCategoryChange(category.id)}
                   className={`px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap flex-shrink-0 snap-center ${
                     activeCategory === category.id
                       ? 'bg-blue-600 dark:bg-blue-500 text-white shadow-md'
@@ -135,6 +241,30 @@ export function PortfolioSection() {
                 </button>
               ))}
             </div>
+
+            {/* Storyboard Subcategories */}
+            {activeCategory === 'storyboard' && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="flex gap-3 bg-accent rounded-full p-2 shadow-md"
+              >
+                {storyboardSubcategories.map((subcategory) => (
+                  <button
+                    key={subcategory.id}
+                    onClick={() => handleSubcategoryChange(subcategory.id)}
+                    className={`px-4 py-2 rounded-full transition-all duration-300 text-sm ${
+                      activeSubcategory === subcategory.id
+                        ? 'bg-blue-600 dark:bg-blue-500 text-white shadow-md'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-card'
+                    }`}
+                  >
+                    {subcategory.label}
+                  </button>
+                ))}
+              </motion.div>
+            )}
           </motion.div>
 
           {/* Portfolio Grid */}
