@@ -145,7 +145,6 @@ const portfolioWorks: PortfolioWork[] = [
 ];
 
 const categories = [
-  { id: 'all', label: 'All Work' },
   { id: 'storyboard', label: 'Storyboards' },
   { id: 'animation', label: '2D Animation' },
   { id: 'character', label: 'Character Design' },
@@ -157,15 +156,11 @@ const storyboardSubcategories = [
 ];
 
 export function PortfolioSection() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('storyboard');
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
   const [selectedWork, setSelectedWork] = useState<PortfolioWork | null>(null);
 
   const filteredWorks = (() => {
-    if (activeCategory === 'all') {
-      return portfolioWorks;
-    }
-    
     if (activeCategory === 'storyboard' && activeSubcategory) {
       return portfolioWorks.filter(work => 
         work.category === 'storyboard' && work.subcategory === activeSubcategory
