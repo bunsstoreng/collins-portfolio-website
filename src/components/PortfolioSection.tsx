@@ -66,41 +66,93 @@ const portfolioWorks: PortfolioWork[] = [
   // Storyboard - Action Subcategory
   {
     id: 7,
-    title: "Action Sequence Storyboard",
+    title: "She Fights a KILLER AI Robot to Save the Hostage",
     category: "storyboard",
     subcategory: "action",
-    mediaType: "image",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY3Rpb24lMjBzZXF1ZW5jZSUyMHN0b3J5Ym9hcmR8ZW58MXx8fHwxNzU4NzEwOTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "High-energy action sequence storyboard for thriller film"
+    mediaType: "video",
+    image: "https://img.youtube.com/vi/ddlT0A40nM0/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/ddlT0A40nM0",
+    description: "An intense storyboard animatic depicting a heroine battling a rogue AI robot to rescue a hostage"
   },
   {
     id: 8,
-    title: "Car Chase Storyboard",
+    title: "SAKUGA FIGHT SCENE - DRAGON VS KNIGHT LADY",
     category: "storyboard",
     subcategory: "action",
     mediaType: "video",
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBjaGFzZSUyMHN0b3J5Ym9hcmR8ZW58MXx8fHwxNzU4NzEwOTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    description: "Dynamic car chase sequence storyboard with multiple camera angles"
+    image: "https://img.youtube.com/vi/zPcgLWg0Nug/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/zPcgLWg0Nug",
+    description: "A dynamic fight scene showcasing a fierce battle between a dragon and a knight lady, animated in sakuga style"
   },
   {
     id: 9,
-    title: "Fight Scene Storyboard",
-    category: "storyboard",
-    subcategory: "action",
-    mediaType: "image",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWdodCUyMHNjZW5lJTIwc3Rvcnlib2FyZHxlbnwxfHx8fDE3NTg3MTA5ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Intense hand-to-hand combat storyboard with choreography notes"
-  },
-  {
-    id: 10,
-    title: "Explosion Sequence",
+    title: "Spider-Man Action Sequence",
     category: "storyboard",
     subcategory: "action",
     mediaType: "video",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleHBsb3Npb24lMjBzZXF1ZW5jZXxlbnwxfHx8fDE3NTg3MTA5ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    description: "Explosive action sequence storyboard with timing and effects notes"
+    image: "https://img.youtube.com/vi/h_jW3p9av8U/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/h_jW3p9av8U",
+    description: "An action-packed sequence featuring Spider-Man in a thrilling adventure"
+  },
+  {
+    id: 10,
+    title: "I Created the MOST EPIC Storyboard Animatic Action Fight Scene EVER!",
+    category: "storyboard",
+    subcategory: "action",
+    mediaType: "video",
+    image: "https://img.youtube.com/vi/dALDBM5aEuU/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/dALDBM5aEuU",
+    description: "A creator's ambitious attempt to craft the most epic action fight scene in storyboard animatic form"
+  },
+  {
+    id: 15,
+    title: "My Cut of Devil May Cry | Storyboard Animatic Action Scene",
+    category: "storyboard",
+    subcategory: "action",
+    mediaType: "video",
+    image: "https://img.youtube.com/vi/cmXTRgQHBwU/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/cmXTRgQHBwU",
+    description: "A personal interpretation of a Devil May Cry action scene, presented as a storyboard animatic"
+  },
+  {
+    id: 16,
+    title: "I Created the MOST EPIC Storyboard Animatic Action Fight Scene EVER! 2",
+    category: "storyboard",
+    subcategory: "action",
+    mediaType: "video",
+    image: "https://img.youtube.com/vi/tWB9GyuaGew/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/tWB9GyuaGew",
+    description: "A sequel to the creator's previous work, aiming to surpass the original in epicness and action"
+  },
+  {
+    id: 17,
+    title: "Unstoppable Force vs Immovable Object – Action Storyboard Fight",
+    category: "storyboard",
+    subcategory: "action",
+    mediaType: "video",
+    image: "https://img.youtube.com/vi/JZ4-WF6w3XM/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/JZ4-WF6w3XM",
+    description: "A conceptual fight scene exploring the clash between an unstoppable force and an immovable object"
+  },
+  {
+    id: 18,
+    title: "FLY GIRL | Epic City Flight & Missile Battle",
+    category: "storyboard",
+    subcategory: "action",
+    mediaType: "video",
+    image: "https://img.youtube.com/vi/xCbZB8EOId0/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/xCbZB8EOId0",
+    description: "An exhilarating animatic featuring a female protagonist navigating a cityscape while engaging in a missile battle"
+  },
+  {
+    id: 19,
+    title: "MAN vs ZOMBIES | Brutal Storyboard Animatic Fight",
+    category: "storyboard",
+    subcategory: "action",
+    mediaType: "video",
+    image: "https://img.youtube.com/vi/VBw6ncOZeCY/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/VBw6ncOZeCY",
+    description: "A brutal and intense animatic depicting a man's fight for survival against a horde of zombies"
   },
 
   // Storyboard - Drama Subcategory
@@ -356,15 +408,26 @@ export function PortfolioSection() {
               {/* Media Content */}
               <div className="relative">
                 {selectedWork.mediaType === 'video' && selectedWork.videoUrl ? (
-                  <video
-                    controls
-                    autoPlay
-                    className="w-full max-h-[70vh] object-contain"
-                    poster={selectedWork.image}
-                  >
-                    <source src={selectedWork.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  selectedWork.videoUrl.includes('youtube.com/embed') ? (
+                    <iframe
+                      src={selectedWork.videoUrl}
+                      title={selectedWork.title}
+                      className="w-full h-[70vh]"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <video
+                      controls
+                      autoPlay
+                      className="w-full max-h-[70vh] object-contain"
+                      poster={selectedWork.image}
+                    >
+                      <source src={selectedWork.videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  )
                 ) : (
                   <ImageWithFallback
                     src={selectedWork.image}
