@@ -1,17 +1,18 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { X, Play } from 'lucide-react';
+import { X, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface PortfolioWork {
   id: number;
   title: string;
   category: 'storyboard' | 'animation' | 'character';
   subcategory?: 'action' | 'drama';
-  mediaType: 'image' | 'video';
+  mediaType: 'image' | 'video' | 'slideshow';
   image: string;
   videoUrl?: string;
   description: string;
+  slideshowImages?: string[];
 }
 
 const portfolioWorks: PortfolioWork[] = [
@@ -47,20 +48,130 @@ const portfolioWorks: PortfolioWork[] = [
   // Character Design Works
   {
     id: 2,
-    title: "Fantasy Character Series",
+    title: "Numbered Character Series",
     category: "character",
-    mediaType: "image",
-    image: "https://images.unsplash.com/photo-1741894785509-d87c84bdc275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwyZCUyMGNoYXJhY3RlciUyMGRlc2lnbiUyMGNvbmNlcHQlMjBhcnR8ZW58MXx8fHwxNzU4NzEwOTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Character design concepts for fantasy adventure"
+    mediaType: "slideshow",
+    image: "/assets/character/1.png",
+    description: "A collection of numbered character designs showcasing different styles and concepts",
+    slideshowImages: [
+      "/assets/character/1.png",
+      "/assets/character/2.png",
+      "/assets/character/3.png",
+      "/assets/character/4.png",
+      "/assets/character/7.png",
+      "/assets/character/8.png",
+      "/assets/character/9.png",
+      "/assets/character/10.png",
+      "/assets/character/11.png"
+    ]
   },
   {
     id: 5,
-    title: "Character Animation Reel",
+    title: "AKASI Character Design",
     category: "character",
-    mediaType: "video",
-    image: "https://images.unsplash.com/photo-1732811798242-6d31a6164660?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFyYWN0ZXIlMjBkZXNpZ24lMjBpbGx1c3RyYXRpb258ZW58MXx8fHwxNzU4NjgwMzQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    description: "Character design and animation showcase reel"
+    mediaType: "slideshow",
+    image: "/assets/character/AKASI_B.png",
+    description: "Character design variations for AKASI character",
+    slideshowImages: [
+      "/assets/character/AKASI_B.png",
+      "/assets/character/AKASI_H.png"
+    ]
+  },
+  {
+    id: 20,
+    title: "AL-MAHAD Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/AL-MAHAD B.png",
+    description: "Character design variations for AL-MAHAD character",
+    slideshowImages: [
+      "/assets/character/AL-MAHAD B.png",
+      "/assets/character/AL-MAHAD H.png"
+    ]
+  },
+  {
+    id: 21,
+    title: "ARAALI Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/ARAALI B.png",
+    description: "Character design variations for ARAALI character",
+    slideshowImages: [
+      "/assets/character/ARAALI B.png",
+      "/assets/character/ARAALI H.png"
+    ]
+  },
+  {
+    id: 22,
+    title: "CHAYOMA Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/CHAYOMA B.png",
+    description: "Character design variations for CHAYOMA character",
+    slideshowImages: [
+      "/assets/character/CHAYOMA B.png",
+      "/assets/character/CHAYOMA F.png"
+    ]
+  },
+  {
+    id: 23,
+    title: "EMPEROR-TAJ Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/EMPEROR-TAJ B.png",
+    description: "Character design variations for EMPEROR-TAJ character",
+    slideshowImages: [
+      "/assets/character/EMPEROR-TAJ B.png",
+      "/assets/character/EMPEROR-TAJ H.png"
+    ]
+  },
+  {
+    id: 24,
+    title: "OKPONDO Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/OKPONDO b.png",
+    description: "Character design variations for OKPONDO character",
+    slideshowImages: [
+      "/assets/character/OKPONDO b.png",
+      "/assets/character/OKPONDO f.png"
+    ]
+  },
+  {
+    id: 25,
+    title: "ONI Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/ONI B.png",
+    description: "Character design variations for ONI character",
+    slideshowImages: [
+      "/assets/character/ONI B.png",
+      "/assets/character/ONI H.png"
+    ]
+  },
+  {
+    id: 26,
+    title: "PRIESTESS-MCHAWI Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/PRIESTESS-MCHAWI.png",
+    description: "Character design variations for PRIESTESS-MCHAWI character",
+    slideshowImages: [
+      "/assets/character/PRIESTESS-MCHAWI.png",
+      "/assets/character/PRIESTESS-MCHAWI HEAD.png"
+    ]
+  },
+  {
+    id: 27,
+    title: "SYPHAX Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/SYPHAX B.png",
+    description: "Character design variations for SYPHAX character",
+    slideshowImages: [
+      "/assets/character/SYPHAX B.png",
+      "/assets/character/SYPHAX H.png"
+    ]
   },
 
   // Storyboard - Action Subcategory
@@ -211,6 +322,7 @@ export function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState('storyboard');
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
   const [selectedWork, setSelectedWork] = useState<PortfolioWork | null>(null);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   const filteredWorks = (() => {
     if (activeCategory === 'storyboard' && activeSubcategory) {
@@ -237,12 +349,30 @@ export function PortfolioSection() {
 
   const openModal = (work: PortfolioWork) => {
     setSelectedWork(work);
+    setCurrentSlideIndex(0);
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setSelectedWork(null);
+    setCurrentSlideIndex(0);
     document.body.style.overflow = 'unset';
+  };
+
+  const nextSlide = () => {
+    if (selectedWork?.slideshowImages) {
+      setCurrentSlideIndex((prev) => 
+        prev === selectedWork.slideshowImages!.length - 1 ? 0 : prev + 1
+      );
+    }
+  };
+
+  const prevSlide = () => {
+    if (selectedWork?.slideshowImages) {
+      setCurrentSlideIndex((prev) => 
+        prev === 0 ? selectedWork.slideshowImages!.length - 1 : prev - 1
+      );
+    }
   };
 
   return (
@@ -394,7 +524,7 @@ export function PortfolioSection() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative bg-card rounded-xl overflow-hidden max-w-6xl max-h-[95vh] w-full shadow-2xl"
+              className="relative bg-card rounded-xl overflow-hidden max-w-4xl max-h-[250vh] w-full shadow-4xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -407,9 +537,57 @@ export function PortfolioSection() {
 
               {/* Media Content */}
               <div className="relative">
-                {selectedWork.mediaType === 'video' && selectedWork.videoUrl ? (
+                {selectedWork.mediaType === 'slideshow' && selectedWork.slideshowImages ? (
+                  <div className="relative">
+                    <ImageWithFallback
+                      src={selectedWork.slideshowImages[currentSlideIndex]}
+                      alt={`${selectedWork.title} - Image ${currentSlideIndex + 1}`}
+                      className="w-full max-h-[70vh] object-contain"
+                    />
+                    
+                    {/* Navigation Arrows */}
+                    {selectedWork.slideshowImages.length > 1 && (
+                      <>
+                        <button
+                          onClick={prevSlide}
+                          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-200 z-10"
+                        >
+                          <ChevronLeft className="w-6 h-6" />
+                        </button>
+                        <button
+                          onClick={nextSlide}
+                          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-200 z-10"
+                        >
+                          <ChevronRight className="w-6 h-6" />
+                        </button>
+                      </>
+                    )}
+                    
+                    {/* Slide Indicators */}
+                    {selectedWork.slideshowImages.length > 1 && (
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                        {selectedWork.slideshowImages.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentSlideIndex(index)}
+                            className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                              index === currentSlideIndex ? 'bg-white' : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    
+                    {/* Slide Counter */}
+                    {selectedWork.slideshowImages.length > 1 && (
+                      <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm z-10">
+                        {currentSlideIndex + 1} / {selectedWork.slideshowImages.length}
+                      </div>
+                    )}
+                  </div>
+                ) : selectedWork.mediaType === 'video' && selectedWork.videoUrl ? (
                   selectedWork.videoUrl.includes('youtube.com/embed') ? (
-                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <div className="relative w-full" style={{ paddingBottom: '50%' }}>
                       <iframe
                         src={selectedWork.videoUrl}
                         title={selectedWork.title}
