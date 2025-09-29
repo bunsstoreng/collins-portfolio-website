@@ -82,11 +82,11 @@ const portfolioWorks: PortfolioWork[] = [
     title: "AL-MAHAD Character Design",
     category: "character",
     mediaType: "slideshow",
-    image: "/assets/character/AL-MAHAD B.png",
+    image: "/assets/character/AL-MAHAD H.png",
     description: "Character design variations for AL-MAHAD character",
     slideshowImages: [
-      "/assets/character/AL-MAHAD B.png",
-      "/assets/character/AL-MAHAD H.png"
+      "/assets/character/AL-MAHAD H.png",
+      "/assets/character/AL-MAHAD B.png"
     ]
   },
   {
@@ -106,11 +106,11 @@ const portfolioWorks: PortfolioWork[] = [
     title: "CHAYOMA Character Design",
     category: "character",
     mediaType: "slideshow",
-    image: "/assets/character/CHAYOMA B.png",
+    image: "/assets/character/CHAYOMA F.png",
     description: "Character design variations for CHAYOMA character",
     slideshowImages: [
-      "/assets/character/CHAYOMA B.png",
-      "/assets/character/CHAYOMA F.png"
+      "/assets/character/CHAYOMA F.png",
+      "/assets/character/CHAYOMA B.png"
     ]
   },
   {
@@ -130,11 +130,11 @@ const portfolioWorks: PortfolioWork[] = [
     title: "OKPONDO Character Design",
     category: "character",
     mediaType: "slideshow",
-    image: "/assets/character/OKPONDO b.png",
+    image: "/assets/character/OKPONDO f.png",
     description: "Character design variations for OKPONDO character",
     slideshowImages: [
-      "/assets/character/OKPONDO b.png",
-      "/assets/character/OKPONDO f.png"
+      "/assets/character/OKPONDO f.png",
+      "/assets/character/OKPONDO b.png"
     ]
   },
   {
@@ -154,11 +154,11 @@ const portfolioWorks: PortfolioWork[] = [
     title: "PRIESTESS-MCHAWI Character Design",
     category: "character",
     mediaType: "slideshow",
-    image: "/assets/character/PRIESTESS-MCHAWI.png",
+    image: "/assets/character/PRIESTESS-MCHAWI HEAD.png",
     description: "Character design variations for PRIESTESS-MCHAWI character",
     slideshowImages: [
-      "/assets/character/PRIESTESS-MCHAWI.png",
-      "/assets/character/PRIESTESS-MCHAWI HEAD.png"
+      "/assets/character/PRIESTESS-MCHAWI HEAD.png",
+      "/assets/character/PRIESTESS-MCHAWI.png"
     ]
   },
   {
@@ -171,6 +171,64 @@ const portfolioWorks: PortfolioWork[] = [
     slideshowImages: [
       "/assets/character/SYPHAX B.png",
       "/assets/character/SYPHAX H.png"
+    ]
+  },
+  {
+    id: 28,
+    title: "AJAKA Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/NEW/AJAKA1.jpg",
+    description: "Character design variations for AJAKA character",
+    slideshowImages: [
+      "/assets/character/NEW/AJAKA1.jpg",
+      "/assets/character/NEW/AJAKA2.png",
+      "/assets/character/NEW/AJAKA3.jpg"
+    ]
+  },
+  {
+    id: 29,
+    title: "BLOODWARS Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/NEW/BLOODWARS1.png",
+    description: "Character design variations for BLOODWARS character",
+    slideshowImages: [
+      "/assets/character/NEW/BLOODWARS1.png",
+      "/assets/character/NEW/BLOODWARS3.png",
+      "/assets/character/NEW/BLOODWARS2.png"
+    ]
+  },
+  {
+    id: 30,
+    title: "HERO Character Design Series",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/NEW/HERO1.png",
+    description: "A comprehensive series of HERO character designs showcasing different poses and variations",
+    slideshowImages: [
+      "/assets/character/NEW/HERO1.png",
+      "/assets/character/NEW/HERO2.png",
+      "/assets/character/NEW/HERO3.png",
+      "/assets/character/NEW/HERO4.png",
+      "/assets/character/NEW/HERO5.png",
+      "/assets/character/NEW/HERO6.png",
+      "/assets/character/NEW/HERO7.png",
+      "/assets/character/NEW/HERO8.png",
+      "/assets/character/NEW/HERO9.png",
+      "/assets/character/NEW/HERO10.png"
+    ]
+  },
+  {
+    id: 31,
+    title: "Schoolgirl Character Design",
+    category: "character",
+    mediaType: "slideshow",
+    image: "/assets/character/NEW/schoolgirl2.png",
+    description: "Character design variations for schoolgirl character",
+    slideshowImages: [
+      "/assets/character/NEW/schoolgirl2.png",
+      "/assets/character/NEW/schoolgirl 3.png"
     ]
   },
 
@@ -309,7 +367,6 @@ const portfolioWorks: PortfolioWork[] = [
 
 const categories = [
   { id: 'storyboard', label: 'Storyboards' },
-  { id: 'animation', label: '2D Animation' },
   { id: 'character', label: 'Character Design' },
 ];
 
