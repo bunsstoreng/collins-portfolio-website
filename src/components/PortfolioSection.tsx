@@ -324,44 +324,36 @@ const portfolioWorks: PortfolioWork[] = [
     description: "A brutal and intense animatic depicting a man's fight for survival against a horde of zombies"
   },
 
-  // Storyboard - Drama Subcategory
+  // Storyboard - Drama Subcategory (Updated)
   {
     id: 11,
-    title: "Emotional Dialogue Scene",
+    title: "Heartfelt Confrontation – Storyboard Animatic (Drama)",
     category: "storyboard",
     subcategory: "drama",
-    mediaType: "image",
-    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbW90aW9uYWwlMjBkaWFsb2d1ZSUyMHNjZW5lfGVufDF8fHx8MTc1ODcxMDk4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Intimate dialogue scene storyboard focusing on character emotions"
+    mediaType: "video",
+    image: "https://img.youtube.com/vi/8S-5C4Vup8I/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/8S-5C4Vup8I",
+    description: "An emotional confrontation unfolds through expressive boards and deliberate pacing."
   },
   {
     id: 12,
-    title: "Family Reunion Storyboard",
+    title: "Quiet Goodbye – Storyboard Animatic (Drama)",
     category: "storyboard",
     subcategory: "drama",
     mediaType: "video",
-    image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjByZXVuaW9uJTIwc3Rvcnlib2FyZHxlbnwxfHx8fDE3NTg3MTA5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-    description: "Heartwarming family reunion storyboard with emotional beats"
+    image: "https://img.youtube.com/vi/primnL3kMds/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/primnL3kMds",
+    description: "A tender farewell captured with restrained performance beats and intimate framing."
   },
   {
     id: 13,
-    title: "Romantic Moment Storyboard",
-    category: "storyboard",
-    subcategory: "drama",
-    mediaType: "image",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMG1vbWVudCUyMHN0b3J5Ym9hcmR8ZW58MXx8fHwxNzU4NzEwOTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Tender romantic scene storyboard with subtle character interactions"
-  },
-  {
-    id: 14,
-    title: "Loss and Grief Sequence",
+    title: "Final Letter – Storyboard Animatic (Drama)",
     category: "storyboard",
     subcategory: "drama",
     mediaType: "video",
-    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb3NzJTIwYW5kJTIwZ3JpZWYlMjBzZXF1ZW5jZXxlbnwxfHx8fDE3NTg3MTA5ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    description: "Powerful dramatic sequence storyboard exploring themes of loss and grief"
+    image: "https://img.youtube.com/vi/fiWpOtqU0DE/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/fiWpOtqU0DE",
+    description: "A letter changes everything; quiet visuals emphasize internal conflict and resolve."
   }
 ];
 
@@ -528,6 +520,17 @@ export function PortfolioSection() {
                         src={work.image}
                         alt={work.title}
                         className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                        fallbackSrcs={
+                          work.videoUrl && work.videoUrl.includes('youtube.com/embed')
+                            ? [
+                                // Try maxresdefault, hqdefault, then default
+                                `https://img.youtube.com/vi/${work.videoUrl.split('/embed/')[1]}/maxresdefault.jpg`,
+                                `https://img.youtube.com/vi/${work.videoUrl.split('/embed/')[1]}/hqdefault.jpg`,
+                                `https://img.youtube.com/vi/${work.videoUrl.split('/embed/')[1]}/default.jpg`
+                              ]
+                            : []
+                        }
                       />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 group-hover:bg-white/30 transition-colors duration-300">
@@ -540,6 +543,7 @@ export function PortfolioSection() {
                       src={work.image}
                       alt={work.title}
                       className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -558,6 +562,9 @@ export function PortfolioSection() {
                      work.category === 'animation' ? '2D Animation' :
                      'Character Design'}
                   </span>
+                  {work.mediaType === 'slideshow' && work.slideshowImages && (
+                    <link rel="preload" as="image" href={work.slideshowImages[0]} />
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -600,6 +607,7 @@ export function PortfolioSection() {
                       src={selectedWork.slideshowImages[currentSlideIndex]}
                       alt={`${selectedWork.title} - Image ${currentSlideIndex + 1}`}
                       className="w-full max-h-[70vh] object-contain"
+                      loading="lazy"
                     />
                     
                     {/* Navigation Arrows */}
@@ -670,6 +678,7 @@ export function PortfolioSection() {
                     src={selectedWork.image}
                     alt={selectedWork.title}
                     className="w-full max-h-[70vh] object-contain"
+                    loading="lazy"
                   />
                 )}
               </div>
